@@ -6,6 +6,7 @@ using LeaveManagementSystem.Web.Services;
 
 namespace LeaveManagementSystem.Web.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class LeaveTypesController(ILeaveTypeService leaveTypeService) : Controller
     {
         private readonly ILeaveTypeService _leaveTypeService = leaveTypeService;
